@@ -8,18 +8,25 @@ import PrivateHeader from './PrivateHeader';
 if (Meteor.isClient) {
     describe('PrivateHeader', function () {
         it('should set button text to logout', function () {
-            const wrapper = mount(<PrivateHeader title="test title" />);
+            const wrapper = mount(<PrivateHeader title="test title" handleLogout={() => { }} />);
             const buttonText = wrapper.find('button').text();
 
             expect(buttonText).toBe('Logout');
         })
 
-        it('should use title props as h1 text', function(){
-            const title="new test title";
+        it('should use title props as h1 text', function () {
+            const title = "new test title";
 
-            const wrapper = mount(<PrivateHeader title={title} />);
-            const h1Text= wrapper.find('h1').text();
+            const wrapper = mount(<PrivateHeader title={title} handleLogout={() => { }} />);
+            const h1Text = wrapper.find('h1').text();
             expect(h1Text).toBe(title);
+        })
+
+        it('should call handleLogout on click', function () {
+            const spy = expect.createSpy();
+            const wrapper = mount(<PrivateHeader title="test" handleLogout={spy} />);
+            wrapper.find('button').simulate('click');
+            expect(spy).toHaveBeenCalled();
         })
     });
 }
