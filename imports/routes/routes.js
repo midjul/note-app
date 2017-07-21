@@ -7,7 +7,7 @@ import Dashboard from "../ui/Dashboard";
 import NotFound from "../ui/NotFound";
 import Login from "../ui/Login";
 import {Session} from 'meteor/session';
-
+ 
 const unauthanticatedPages = ["/", "/signup"];
 const authenticatedpages = ["/dashboard"];
 const onEnterPublicPage = () => {
