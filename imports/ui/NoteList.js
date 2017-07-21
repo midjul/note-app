@@ -5,13 +5,14 @@ import { Notes } from '../api/notes';
 import PropTypes from 'prop-types';
 import NoteListHeader from './NoteListHeader';
 import NoteListItem from './NoteListItem';
-import NoteListEmptyItem from './NoteListEmptyItem'
+import NoteListEmptyItem from './NoteListEmptyItem';
+import { Session } from 'meteor/session';
 export const NoteList = (props) => {
     return (
         <div>
             <NoteListHeader />
-            {props.notes.length===0 ? <NoteListEmptyItem /> : undefined}
-            {props.notes.map((note)=> <NoteListItem key={note._id} note={note} />)}
+            {props.notes.length === 0 ? <NoteListEmptyItem /> : undefined}
+            {props.notes.map((note) => <NoteListItem key={note._id} note={note} />)}
             NoteList {props.notes.length}
         </div>
     )
@@ -22,8 +23,9 @@ NoteList.propTypes = {
 }
 
 export default createContainer(() => {
+    const selectedNoteId = Session.get('selectedNoteId');
     Meteor.subscribe('notes');
     return {
-        notes: Notes.find().fetch()
+        notes: Notes.find().fetch().map((note) => ({ ...note, selected: note._id === selectedNoteId }))
     };
 }, NoteList)
