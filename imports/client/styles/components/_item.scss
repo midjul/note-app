@@ -7,19 +7,44 @@
 }
 //item
 .item{
-    background: $item-bg;
-    border:1px solid $item-border;
-    margin-bottom: $space;
+cursor: pointer;
+padding:$space;
+border-left: $item-border-width solid transparent;
+transition: background-color .3s ease, border-left .3s ease;
+}
+
+.item:hover{
+    background-color: $light-grey;
+    border-left:$item-border-width solid $grey;
+}
+
+.empty-item{
+    font-style: italic;
+    padding:$space;
+    text-align: center;
+}
+
+.item-list__header{
+    display: flex;
+    flex-direction: column;
     padding:$space;
 }
 
-.item__message{
-    color: $item-text-color;
+.item--selected, .item--selected:hover{
+    background-color: $light-grey;
+    border-left:$item-border-width solid $brand-primary;
 }
 
-.item__status-message{
-    color:$item-text-color;
-    font-style: italic;
-    text-align: center;
-    margin: 0;
+.item__title{
+  font-weight: normal;
+  font-size: $base-font-size;
+  margin-bottom: .4rem;
+}
+.item--selected .item__title{
+    font-weight: bold;
+}
+
+.item__subtitle{
+ color: darken($grey, 20%);
+ margin:0;
 }

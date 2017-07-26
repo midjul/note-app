@@ -2,6 +2,7 @@
 
 //Colors
 $grey:#ddd;
+$light-grey:#f9f9f9;
 $brand-primary:#397ab1;
 //Spacing
 $space:1.4rem;
@@ -37,6 +38,4 @@ $page-content-main-width:calc(#{$site-max-width} - #{$page-content-sidebar-width
 $page-content-height:calc(100vh - #{$header-height});
 
 //item
-$item-bg:#f9f9f9;
-$item-border:darken($item-bg, 8%);
-$item-text-color:#777;
+$item-border-width: 4px;
