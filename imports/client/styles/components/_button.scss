@@ -22,6 +22,11 @@
     padding:.3rem .8rem;
     margin:0 ($space/2) 0 0;
 }
+.button--delete{
+    background-color:lighten($grey, 5%);
+    color: darken($grey, 35%);
+
+}
 
 .button--link-text{
     background:none;
