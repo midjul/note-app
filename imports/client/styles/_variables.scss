@@ -1,9 +1,11 @@
+
+
 //Colors
 $grey:#ddd;
-$purple:#5b4681;
+$brand-primary:#397ab1;
 //Spacing
 $space:1.4rem;
-$site-max-width:50rem;
+$site-max-width:100rem;
 //font size 
 $base-font-size:1.6rem;
 $large-font-size:1.8rem;
@@ -13,15 +15,21 @@ $input-spacing:1rem;
 //Boxed view
 $box-view-overlay-bg:$grey;
 $boxed-view-bg:white;
-
-
+$boxed-view-border-color: $grey;
+//body
+ $body-background-color:#fafafa;
+ $body-default-color:#333;
 //buttons
-$button-bg:#5b4681;
+$button-bg:$brand-primary;
 $button-color:white;
-$button-pill-color:#5b4681;
+$button-pill-color:$brand-primary;
+
+//page content
+$page-content-sidebar-width:30rem;
+$page-content-main-width:calc(#{$site-max-width} - #{$page-content-sidebar-width} );
 
 //header
-$header-bg:#5b4681;
+$header-bg:$brand-primary;
 $header-color:white;
 
 //item

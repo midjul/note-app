@@ -1,13 +1,13 @@
 .boxed-view{
     align-items: center;
     justify-content: center;
-    background:$box-view-overlay-bg;
     height: 100vh; 
     width:100vw;
     display: flex;
 }
 
 .boxed-view__box{
+    border:1px solid $boxed-view-border-color;
     background-color: $boxed-view-bg;
     padding:2.4rem;
     text-align: center;

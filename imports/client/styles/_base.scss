@@ -7,6 +7,8 @@ html{
 }
 
 body{
+  background-color: $body-background-color;
+  color:$body-default-color;
  font-size: $base-font-size;
  font-family: Helvetica, Arial, sans-serif;
 }
@@ -21,8 +23,7 @@ margin-bottom: $space;
 }
 
 a{
-  color:black;
-  
+  color:$body-default-color;
 }
 
 input[type=text], input[type=email], input[type=password]{
