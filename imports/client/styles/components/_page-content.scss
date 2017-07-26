@@ -3,13 +3,15 @@
   max-width: $site-max-width;
   margin:0 auto;
   padding:$space;
+height: $page-content-height;
 }
 
 .page-content__sidebar{
+  display: flex;
  width: $page-content-sidebar-width;
 }
 
 .page-content__main{
-
+display: flex;
  width: $page-content-main-width;
 }

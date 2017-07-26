@@ -50,7 +50,7 @@ export class Editor extends Component {
     render() {
         if (this.props.note) {
             return (
-                <div>
+                <div className="editor">
                     <input onChange={this.handleTitleChange} value={this.state.title} type="text" placeholder="Untitled Note" />
                     <textarea value={this.state.body} placeholder="Your note here" onChange={this.handleBodyChange}></textarea>
                     <button onClick={this.handleDeleteNote}>Delete Note</button>
@@ -58,10 +58,13 @@ export class Editor extends Component {
             )
         } else if (this.props.selectedNoteId) {
             return (
-                <p>
-                    Note not found.
+                <div className="editor">
+                    <p>
+                        Note not found.
                 </p>
+                </div>
             )
+
         } else {
             return (
                 <p>Pick or create a note to get started.</p>
