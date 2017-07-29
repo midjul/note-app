@@ -5,6 +5,7 @@
 
 .header__content{
   display: flex;
+  align-items: center;
   height: $header-height;
   justify-content: space-between;
   max-width: $site-max-width;
@@ -17,3 +18,11 @@
 
 }
 
+.header__nav-toggle{
+  cursor:pointer;
+  height: 2rem;
+  width: 2rem;
+  @include desktop{
+    display: none;
+  }
+}
