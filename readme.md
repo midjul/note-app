@@ -16,7 +16,7 @@ meteor
 
 ## Running the Tests
 
-Running he tests is easy. All you have to do is run the following command and view the reporter at localhost port 3000.
+Running the tests is easy. All you have to do is run the following command and view the reporter at localhost port 3000.
 
 ```
 npm test
