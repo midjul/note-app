@@ -2,7 +2,7 @@
 
 This is a notes application build on Meteor.
 
-##Getting Started
+## Getting Started
 
 This app requires you to have Meteor installed on your machine. Then you can clone the repo and rung following:
 
